@@ -6,7 +6,7 @@ __pycache__/
 *$py.class
 
 # =========================
-# Virtual environments
+# Common local environments
 # =========================
 .venv/
 venv/
@@ -26,16 +26,17 @@ Thumbs.db
 # =========================
 # Notebooks / tooling caches
 # =========================
-chu_DESCRIPTIVA_PRyES_v4.2.ipynb
 .ipynb_checkpoints/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
 
 # =========================
-# Project scratch files
+# Project scratch / temporary
 # =========================
 test.py
+.tmp_docx/
+.tmp_docx.zip
 
 # =========================
 # Data & outputs (do not commit)
@@ -45,7 +46,6 @@ artifacts/
 outputs/
 plots/
 DATOS_IMAT_2026/
-
 
 # Dataset files (keep raw data out of git)
 *.csv
@@ -72,4 +72,3 @@ DATOS_IMAT_2026/
 *.secret
 secrets.*
 config.local.*
-Trabajo 1.zip
