@@ -1,23 +1,30 @@
+<div align="center">
+
 # Trabajo 2 - Inferencia Estadistica Meteorologica
+
+Inferencia estadistica aplicada a series meteorologicas diarias, con flujo reproducible en Jupyter y organizacion por apartados del enunciado oficial.
 
 ![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?logo=python&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white)
 ![pandas](https://img.shields.io/badge/pandas-150458?logo=pandas&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?logo=scipy&logoColor=white)
+![Statsmodels](https://img.shields.io/badge/Statsmodels-1f77b4)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c)
 ![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0)
-![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?logo=scipy&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-Analisis de inferencia estadistica aplicado a series meteorologicas diarias en la celda 01, organizado por apartados del enunciado y desarrollado en notebooks de Jupyter.
+</div>
 
-## Resumen Del Proyecto
+---
 
-- Variables analizadas: temperatura a 2 m, irradiacion solar descendente en superficie y precipitacion total.
+## Vision General
+
+- Variables: temperatura a 2m, irradiacion solar descendente y precipitacion total.
 - Cobertura temporal: 2014-01-01 a 2025-12-31.
-- Resolucion temporal: diaria.
-- Enfoque: contrastes de hipotesis, ajuste de distribuciones, Bootstrap y simulacion.
-- Flujo de trabajo: carga de datos, analisis por apartados y documentacion del informe.
+- Frecuencia: diaria.
+- Alcance metodologico: contrastes de hipotesis, ajuste de distribuciones, bootstrap y simulacion.
+- Entorno: notebooks Jupyter + script de carga reutilizable.
 
 ## Estructura Del Repositorio
 
@@ -30,82 +37,81 @@ Analisis de inferencia estadistica aplicado a series meteorologicas diarias en l
 |   |-- Apartado_2.ipynb
 |   |-- Apartado_3.ipynb
 |   `-- Apartado_4.ipynb
+|-- DATOS_IMAT_2026/
+|-- images/
 |-- documentation/
-|   |-- Informe del trabajo.docx
-|   `-- OBJETIVOS2026_TrabajoInferencia.pdf
+|-- CONTRIBUTING.md
+|-- CODE_OF_CONDUCT.md
+|-- SECURITY.md
 |-- requirements.txt
 |-- LICENSE
 |-- .gitignore
 `-- README.md
 ```
 
-## Contenido Analitico (Por Apartados)
+## Ruta Analitica
 
-### Apartado 1
+| Apartado | Objetivo |
+|---|---|
+| 1 | Contrastes sobre la media estival de temperatura en celda 01 |
+| 2 | Normalidad por trimestres y ajuste de distribuciones |
+| 3 | Intervalos de confianza bootstrap y solape trimestral |
+| 4 | Simulacion por tamano muestral y comparacion con datos reales |
 
-- Contrastes de hipotesis para la media estival de temperatura en celda 01.
-- Contraste unilateral superior e inferior respecto a 30 C.
-- Nivel de confianza del 90% bajo supuesto de normalidad.
+## Puesta En Marcha
 
-### Apartado 2
+1. Crear entorno virtual:
 
-- Contraste KS por trimestres para normalidad en irradiacion, temperatura y precipitacion.
-- Apoyo visual mediante qqplots.
-- Ajuste global de distribuciones uniforme, exponencial, normal, beta, triangular y kernel.
+```bash
+python -m venv .venv
+```
 
-### Apartado 3
+2. Activar entorno:
 
-- Intervalos de confianza Bootstrap para medias trimestrales de irradiacion.
-- Repeticion del analisis para temperatura y precipitacion.
-- Comparacion de solape de intervalos para niveles de confianza del 50% y 99%.
+Windows (PowerShell):
 
-### Apartado 4
+```bash
+.\.venv\Scripts\Activate.ps1
+```
 
-- Simulacion pseudoaleatoria a partir de distribuciones elegidas en el apartado 2.2.
-- Tamano muestral n1 = 10, n2 = 100, n3 = 1000, n4 = 10000.
-- Comparacion entre distribuciones de muestras simuladas y datos reales.
+Linux / macOS:
 
-## Entorno Y Dependencias
+```bash
+source .venv/bin/activate
+```
 
-Dependencias principales:
-
-- `numpy`
-- `pandas`
-- `matplotlib`
-- `seaborn`
-- `scipy`
-- `jupyter` / `notebook` / `ipykernel`
-
-Instalacion:
+3. Instalar dependencias:
 
 ```bash
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-## Ejecucion Reproducible
-
-Orden sugerido para reproducir el trabajo:
-
-1. `src/carga_de_datos.ipynb` o `src/carga_de_datos.py`
-2. `src/Apartado_1.ipynb`
-3. `src/Apartado_2.ipynb`
-4. `src/Apartado_3.ipynb`
-5. `src/Apartado_4.ipynb`
-
-Para lanzar Jupyter:
+4. Lanzar notebooks:
 
 ```bash
 python -m notebook
 ```
 
-## Documentacion Entregable
+## Ejecucion Reproducible
 
-En `documentation` se incluye:
+Orden recomendado:
 
-- Enunciado oficial del trabajo 2.
-- Informe del trabajo en formato editable.
+1. `src/carga_de_datos.ipynb` (o `src/carga_de_datos.py`)
+2. `src/Apartado_1.ipynb`
+3. `src/Apartado_2.ipynb`
+4. `src/Apartado_3.ipynb`
+5. `src/Apartado_4.ipynb`
+
+## Colaboracion
+
+Este repositorio incluye soporte de contribucion estandar:
+
+- Guia de contribucion en `CONTRIBUTING.md`
+- Codigo de conducta en `CODE_OF_CONDUCT.md`
+- Politica de seguridad en `SECURITY.md`
+- Plantillas de issues y pull request en `.github/`
 
 ## Licencia
 
-Proyecto bajo licencia MIT. Consulta el fichero `LICENSE` para el texto completo.
+Proyecto bajo licencia MIT. Consulta `LICENSE` para el texto completo.

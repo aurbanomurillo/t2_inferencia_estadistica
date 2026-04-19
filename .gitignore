@@ -1,82 +1,59 @@
-# =========================
-# Python artifacts
-# =========================
+# Python bytecode and caches
 __pycache__/
 *.py[cod]
 *$py.class
 
-# =========================
-# Common local environments
-# =========================
+# Virtual environments
 .venv/
 venv/
 env/
 ENV/
-.env
 
-# =========================
-# OS / editor / IDE
-# =========================
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
-*.iml
-
-# =========================
-# Notebooks / tooling caches
-# =========================
+# Notebook and tooling caches
 .ipynb_checkpoints/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
-src/chu_INFERENCIA_PRyES_v4.1.ipynb
-src/chu_AJUSTE_DISTR_PRyES_v4.0.ipynb
-src/chu_SIMUL_DISTR_PRyES_v4.0.ipynb
 
-# =========================
-# Project scratch / temporary
-# =========================
+# Local environment and secrets
+.env
+.env.*
+*.local
+*.key
+*.pem
+*.secret
+secrets.*
+config.local.*
+
+# IDE / editor
+.vscode/
+.idea/
+*.iml
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Local scratch files
 test.py
 .tmp_docx/
 .tmp_docx.zip
 documentation/OBJETIVOS2026_TrabajoInferencia.txt
 documentation/apartado_3_assessment.txt
 
-# =========================
-# Data & outputs (do not commit)
-# =========================
-data/
-artifacts/
-outputs/
-plots/
+# Local helper notebooks
+src/chu_INFERENCIA_PRyES_v4.1.ipynb
+src/chu_AJUSTE_DISTR_PRyES_v4.0.ipynb
+src/chu_SIMUL_DISTR_PRyES_v4.0.ipynb
+
+# Local raw datasets
 DATOS_IMAT_2026/
 
-# Dataset files (keep raw data out of git)
-*.csv
-*.tsv
-*.parquet
-*.feather
-*.xlsx
-
-# Serialized models / binaries
-*.joblib
-*.pkl
-*.pickle
-*.onnx
-*.pt
-*.pth
-*.npz
-
-# Logs
-*.log
-
-# Local secrets / config overrides
-*.key
-*.pem
-*.secret
-secrets.*
-config.local.*
-# Temporales de Office
+# Office temporary files
 ~$*.docx
 ~WRL*.tmp
