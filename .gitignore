@@ -31,6 +31,8 @@ Thumbs.db
 .mypy_cache/
 .ruff_cache/
 src/chu_INFERENCIA_PRyES_v4.1.ipynb
+src/chu_AJUSTE_DISTR_PRyES_v4.0.ipynb
+src/chu_SIMUL_DISTR_PRyES_v4.0.ipynb
 
 # =========================
 # Project scratch / temporary
@@ -39,6 +41,7 @@ test.py
 .tmp_docx/
 .tmp_docx.zip
 documentation/OBJETIVOS2026_TrabajoInferencia.txt
+documentation/apartado_3_assessment.txt
 
 # =========================
 # Data & outputs (do not commit)
