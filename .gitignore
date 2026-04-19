@@ -77,3 +77,6 @@ DATOS_IMAT_2026/
 *.secret
 secrets.*
 config.local.*
+# Temporales de Office
+~$*.docx
+~WRL*.tmp
